@@ -1,0 +1,403 @@
+.mobile-app-nav {
+  display: none;
+}
+
+.mobile-section-nav {
+  display: none;
+}
+
+.mobile-app-nav[hidden],
+.mobile-section-nav[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 760px) {
+  :root {
+    --mobile-nav-height: 62px;
+    --mobile-section-nav-height: 42px;
+    --mobile-header-height: 60px;
+    --mobile-gutter: clamp(16px, 5vw, 22px);
+  }
+
+  .mobile-section-nav {
+    position: sticky;
+    z-index: 45;
+    top: var(--mobile-header-height);
+    display: flex;
+    height: var(--mobile-section-nav-height);
+    align-items: center;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 5px var(--mobile-gutter);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.18);
+    background: rgba(24, 22, 20, 0.92);
+    color: #f7f2ee;
+    scrollbar-width: none;
+    backdrop-filter: blur(14px);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .mobile-section-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mobile-section-nav a {
+    display: inline-flex;
+    min-height: 30px;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    padding: 0 11px;
+    border-radius: 999px;
+    color: rgba(247, 242, 238, 0.78);
+    font: 600 0.68rem/1.2 system-ui, sans-serif;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .mobile-section-nav a[aria-current="location"] {
+    background: rgba(217, 182, 133, 0.16);
+    color: #e8c994;
+  }
+
+  html {
+    scroll-padding-top: calc(var(--mobile-header-height) + var(--mobile-section-nav-height) + 12px);
+    scroll-padding-bottom: calc(var(--mobile-nav-height) + env(safe-area-inset-bottom, 0px));
+    scroll-snap-type: y proximity;
+  }
+
+  body.mobile-app-mode {
+    padding-bottom: calc(var(--mobile-nav-height) + env(safe-area-inset-bottom, 0px));
+    min-width: 320px;
+  }
+
+  body.mobile-app-mode > header {
+    min-height: var(--mobile-header-height);
+  }
+
+  body.mobile-app-mode > header .header-inner {
+    min-height: var(--mobile-header-height);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    gap: 10px;
+  }
+
+  body.mobile-app-mode > header .menu-toggle {
+    display: none !important;
+  }
+
+  body.mobile-app-mode > header nav {
+    display: none !important;
+  }
+
+  .mobile-app-nav {
+    position: fixed;
+    z-index: 100;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    min-height: calc(var(--mobile-nav-height) + env(safe-area-inset-bottom, 0px));
+    padding: 6px max(12px, env(safe-area-inset-left, 0px)) calc(6px + env(safe-area-inset-bottom, 0px));
+    border-top: 1px solid rgba(128, 128, 128, 0.24);
+    background: rgba(24, 22, 20, 0.96);
+    color: #f7f2ee;
+    backdrop-filter: blur(18px);
+  }
+
+  .mobile-app-nav a {
+    display: flex;
+    min-width: 0;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    color: inherit;
+    font: 600 0.72rem/1.2 system-ui, sans-serif;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .mobile-app-nav a[aria-current="page"] {
+    background: rgba(217, 182, 133, 0.16);
+    color: #e8c994;
+  }
+
+  .mobile-app-nav a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: -3px;
+  }
+
+  body.mobile-app-mode > section,
+  body.mobile-app-mode > footer {
+    min-height: min(
+      calc(
+        var(--mobile-viewport-height, 100svh) - var(--mobile-header-height) -
+        var(--mobile-section-nav-height) - var(--mobile-nav-height)
+      ),
+      900px
+    );
+    scroll-margin-top: calc(var(--mobile-header-height) + var(--mobile-section-nav-height) + 8px);
+    scroll-snap-align: start;
+  }
+
+  body.mobile-app-mode .wrap {
+    padding-right: var(--mobile-gutter);
+    padding-left: var(--mobile-gutter);
+  }
+
+  body.mobile-app-mode .section-pad {
+    padding-top: clamp(40px, 8vh, 68px);
+    padding-bottom: clamp(40px, 8vh, 68px);
+  }
+
+  body[data-mobile-page="index"].mobile-app-mode .process-decor {
+    display: none;
+  }
+
+  body[data-mobile-page="index"].mobile-app-mode > .hero {
+    padding-bottom: 20px;
+  }
+
+  body[data-mobile-page="index"].mobile-app-mode .stats-bar-wrap {
+    position: relative;
+    bottom: auto;
+    margin-top: 24px;
+    transform: none;
+  }
+
+  body.mobile-app-mode :is(h1, h2, h3) {
+    text-wrap: balance;
+  }
+
+  body.mobile-app-mode :is(button, a, input, select, textarea) {
+    touch-action: manipulation;
+  }
+
+  body.mobile-app-mode :is(.hero, .hero-grid) {
+    min-width: 0;
+  }
+
+  body.mobile-app-mode :is(.project-grid, .service-cols, .insight-cards, .mood-cards) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  body.mobile-app-mode :is(.project-tile, .p-tile-1, .p-tile-2, .p-tile-3, .p-tile-4) {
+    grid-column: auto;
+    grid-row: auto;
+    min-height: clamp(150px, 30vh, 220px);
+  }
+
+  body.mobile-app-mode .project-tile .caption {
+    padding: 12px;
+  }
+
+  body.mobile-app-mode .project-tile .caption h3 {
+    font-size: 0.88rem;
+  }
+
+  body.mobile-app-mode .project-tile .caption span {
+    font-size: 0.68rem;
+  }
+
+  body.mobile-app-mode :is(.home-apparel-grid, .product-grid) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  body.mobile-app-mode .home-apparel-card:last-child:nth-child(odd) {
+    display: block;
+  }
+
+  body.mobile-app-mode .home-apparel-image {
+    aspect-ratio: 0.9;
+  }
+
+  body.mobile-app-mode .product-media {
+    height: auto;
+    aspect-ratio: 0.82;
+  }
+
+  body.mobile-app-mode .product-body {
+    padding: 12px;
+  }
+
+  body.mobile-app-mode .hero-visual {
+    min-height: clamp(250px, 38vh, 340px);
+  }
+
+  body[data-mobile-page="apparels"].mobile-app-mode > .hero {
+    padding-top: 16px;
+    padding-bottom: 18px;
+  }
+
+  body[data-mobile-page="apparels"].mobile-app-mode .hero-grid {
+    gap: 12px;
+    padding: 18px;
+  }
+
+  body[data-mobile-page="apparels"].mobile-app-mode .hero-copy h1 {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+  }
+
+  body[data-mobile-page="apparels"].mobile-app-mode .hero-copy p:not(.eyebrow) {
+    margin: 12px 0 16px;
+  }
+
+  body[data-mobile-page="apparels"].mobile-app-mode .hero-actions {
+    gap: 8px;
+  }
+
+  body[data-mobile-page="apparels"].mobile-app-mode .hero-actions .btn {
+    width: auto;
+    justify-content: center;
+    padding: 12px 14px;
+    font-size: 0.67rem;
+  }
+
+  body[data-mobile-page="apparels"].mobile-app-mode .hero-meta {
+    gap: 8px 14px;
+    margin-top: 14px;
+    font-size: 0.68rem;
+  }
+
+  body[data-mobile-page="apparels"].mobile-app-mode .hero-visual {
+    min-height: clamp(190px, 27vh, 230px);
+  }
+
+  body[data-mobile-page="apparels"].mobile-app-mode .hero-visual .large {
+    height: min(25vh, 220px);
+  }
+
+  body[data-mobile-page="apparels"].mobile-app-mode .hero-visual .small {
+    height: min(17vh, 150px);
+  }
+
+  body[data-mobile-page="desserts"].mobile-app-mode > .hero {
+    padding-top: 26px;
+    padding-bottom: 44px;
+  }
+
+  body[data-mobile-page="desserts"].mobile-app-mode .hero-grid {
+    gap: 14px;
+  }
+
+  body[data-mobile-page="desserts"].mobile-app-mode .cake-photo {
+    max-width: min(58vw, 220px);
+  }
+
+  body[data-mobile-page="desserts"].mobile-app-mode .flavor-list {
+    gap: 6px;
+    margin-top: 12px;
+  }
+
+  body[data-mobile-page="desserts"].mobile-app-mode .flavor-row {
+    min-height: 38px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  body.mobile-app-mode .hero-visual .large {
+    right: 12px;
+    width: 72%;
+    height: min(40vh, 320px);
+  }
+
+  body.mobile-app-mode .hero-visual .small {
+    left: 8px;
+    width: min(42%, 170px);
+    height: min(24vh, 210px);
+  }
+
+  body.mobile-app-mode :is(.promo-grid, .promo-strip) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  body.mobile-app-mode .promo-grid > * {
+    min-width: 0;
+  }
+
+  body.mobile-app-mode .category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  body.mobile-app-mode .category-card {
+    min-height: 112px;
+    padding: 14px;
+  }
+
+  body.mobile-app-mode :is(.home-dessert-layout, .home-apparel-layout) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  body.mobile-app-mode .home-dessert-visual {
+    min-height: clamp(240px, 34vh, 320px);
+  }
+
+  body.mobile-app-mode .home-desserts {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+
+  body.mobile-app-mode .home-apparel-grid {
+    gap: 16px 12px;
+  }
+
+  body.mobile-app-mode :is(.featured-grid, .dna-grid, .test-grid, .process-grid) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  body.mobile-app-mode .featured-grid {
+    text-align: left;
+  }
+
+  body.mobile-app-mode .stage-row {
+    scroll-snap-type: x mandatory;
+  }
+
+  body.mobile-app-mode .stage {
+    min-width: min(74vw, 260px);
+    scroll-snap-align: start;
+  }
+
+  body.mobile-app-mode :is(.footer-grid, .footer-inner) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  body.mobile-app-mode .closing {
+    padding-top: 68px;
+  }
+
+  body.mobile-app-mode .closing-bottom {
+    margin-top: 44px;
+  }
+}
+
+@media (max-width: 390px) {
+  body.mobile-app-mode :is(.project-grid, .service-cols, .insight-cards) {
+    gap: 9px;
+  }
+
+  body.mobile-app-mode .project-tile .tile-arrow {
+    width: 30px;
+    height: 30px;
+  }
+
+  body.mobile-app-mode .home-apparel-card .product-info,
+  body.mobile-app-mode .product-body {
+    font-size: 0.9rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.mobile-app-mode {
+    scroll-behavior: auto;
+  }
+}

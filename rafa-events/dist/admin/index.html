@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>Nexora — Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dashboard.css">
+  <script src="dashboard.js" defer></script>
+</head>
+<body>
+  <div class="dashboard-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="index.html" aria-label="Nexora dashboard">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 2.8 27.5 9.4v13.2L16 29.2 4.5 22.6V9.4L16 2.8Z"/><path d="m11 21 5-10 5 10M13 17h6"/></svg></span>
+        <span class="brand-name">NEXORA</span>
+      </a>
+      <nav class="side-nav" id="sideNav" aria-label="Main navigation">
+        <div class="nav-group">
+          <p class="nav-heading">MAIN</p>
+          <button class="nav-item active" type="button" data-nav="Dashboards"><span class="nav-icon" data-icon="grid"></span><span class="nav-label">Dashboards</span><span class="nav-badge">12</span><span class="nav-chevron">⌄</span></button>
+          <div class="nav-subitems">
+            <button class="nav-item" type="button" data-nav="CRM"><span class="nav-dot"></span><span class="nav-label">CRM</span></button>
+            <button class="nav-item" type="button" data-nav="Ecommerce"><span class="nav-dot"></span><span class="nav-label">Ecommerce</span></button>
+            <button class="nav-item" type="button" data-nav="Crypto"><span class="nav-dot"></span><span class="nav-label">Crypto</span></button>
+            <button class="nav-item" type="button" data-nav="Jobs"><span class="nav-dot"></span><span class="nav-label">Jobs</span></button>
+            <button class="nav-item" type="button" data-nav="NFT"><span class="nav-dot"></span><span class="nav-label">NFT</span></button>
+            <button class="nav-item" type="button" data-nav="Sales"><span class="nav-dot"></span><span class="nav-label">Sales</span></button>
+            <button class="nav-item" type="button" data-nav="Analytics"><span class="nav-dot"></span><span class="nav-label">Analytics</span></button>
+            <button class="nav-item" type="button" data-nav="Projects"><span class="nav-dot"></span><span class="nav-label">Projects</span></button>
+            <button class="nav-item" type="button" data-nav="HRM"><span class="nav-dot"></span><span class="nav-label">HRM</span></button>
+            <button class="nav-item" type="button" data-nav="Stocks"><span class="nav-dot"></span><span class="nav-label">Stocks</span></button>
+            <button class="nav-item" type="button" data-nav="Coursee"><span class="nav-dot"></span><span class="nav-label">Coursee</span></button>
+            <button class="nav-item" type="button" data-nav="Personal"><span class="nav-dot"></span><span class="nav-label">Personal</span></button>
+          </div>
+        </div>
+        <div class="nav-group">
+          <p class="nav-heading">PAGES</p>
+          <button class="nav-item" type="button" data-nav="Pages" data-expandable><span class="nav-icon" data-icon="file"></span><span class="nav-label">Pages</span><span class="new-badge">New</span><span class="nav-chevron">›</span></button>
+          <button class="nav-item" type="button" data-nav="Task" data-expandable><span class="nav-icon" data-icon="checkSquare"></span><span class="nav-label">Task</span><span class="new-badge">New</span><span class="nav-chevron">›</span></button>
+          <button class="nav-item" type="button" data-nav="Authentication" data-expandable><span class="nav-icon" data-icon="lock"></span><span class="nav-label">Authentication</span><span class="nav-chevron">›</span></button>
+          <button class="nav-item" type="button" data-nav="Error" data-expandable><span class="nav-icon" data-icon="alert"></span><span class="nav-label">Error</span><span class="nav-chevron">›</span></button>
+        </div>
+        <div class="nav-group">
+          <p class="nav-heading">APPS</p>
+          <button class="nav-item" type="button" data-nav="Calendar"><span class="nav-icon" data-icon="calendar"></span><span class="nav-label">Calendar</span></button>
+          <button class="nav-item" type="button" data-nav="Email"><span class="nav-icon" data-icon="mail"></span><span class="nav-label">Email</span></button>
+          <button class="nav-item" type="button" data-nav="Chat"><span class="nav-icon" data-icon="message"></span><span class="nav-label">Chat</span></button>
+          <button class="nav-item" type="button" data-nav="File Manager"><span class="nav-icon" data-icon="folder"></span><span class="nav-label">File Manager</span></button>
+        </div>
+        <div class="nav-group">
+          <p class="nav-heading">COMPONENTS</p>
+          <button class="nav-item" type="button" data-nav="UI Elements" data-expandable><span class="nav-icon" data-icon="layers"></span><span class="nav-label">UI Elements</span><span class="nav-chevron">›</span></button>
+          <button class="nav-item" type="button" data-nav="Utilities" data-expandable><span class="nav-icon" data-icon="tool"></span><span class="nav-label">Utilities</span><span class="nav-chevron">›</span></button>
+        </div>
+        <div class="nav-group">
+          <p class="nav-heading">WIDGETS</p>
+          <button class="nav-item" type="button" data-nav="Charts" data-expandable><span class="nav-icon" data-icon="chart"></span><span class="nav-label">Charts</span><span class="nav-chevron">›</span></button>
+          <button class="nav-item" type="button" data-nav="Forms" data-expandable><span class="nav-icon" data-icon="form"></span><span class="nav-label">Forms</span><span class="nav-chevron">›</span></button>
+        </div>
+      </nav>
+    </aside>
+
+    <div class="main-shell">
+      <header class="topbar">
+        <button class="menu-button" id="sidebarToggle" type="button" aria-label="Toggle navigation" aria-expanded="true"><span></span><span></span><span></span></button>
+        <div class="topbar-tools">
+          <label class="global-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg><input id="globalSearch" type="search" placeholder="Search anything..." autocomplete="off" aria-label="Search dashboard"></label>
+          <div class="popover-wrap">
+            <button class="header-button language-button" type="button" data-menu="languageMenu" aria-expanded="false"><span class="flag">🇺🇸</span><span>EN</span><span class="small-chevron">⌄</span></button>
+            <div class="popover language-menu" id="languageMenu" hidden><button type="button">🇺🇸 &nbsp; English</button><button type="button">🇫🇷 &nbsp; Français</button><button type="button">🇪🇸 &nbsp; Español</button></div>
+          </div>
+          <button class="header-button icon-only theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode"><span data-icon="moon"></span></button>
+          <div class="popover-wrap">
+            <button class="header-button icon-only notification-button" type="button" data-menu="notificationMenu" aria-label="Notifications, 2 unread" aria-expanded="false"><span data-icon="bell"></span><span class="notification-count">2</span></button>
+            <div class="popover notification-menu" id="notificationMenu" hidden><strong>Notifications</strong><p>New lead assigned to your team <small>5 min ago</small></p><p>Your weekly report is ready <small>1 hr ago</small></p></div>
+          </div>
+          <button class="header-button icon-only email-button" type="button" id="emailButton" aria-label="Open messages"><span data-icon="mail"></span><span class="notification-count">4</span></button>
+          <button class="header-button icon-only fullscreen-button" type="button" id="fullscreenButton" aria-label="Toggle fullscreen"><span data-icon="expand"></span></button>
+          <div class="popover-wrap profile-wrap">
+            <button class="profile-button" type="button" data-menu="profileMenu" aria-expanded="false"><span class="avatar avatar-photo">JT</span><span class="profile-copy"><strong>Json Taylor</strong><small>Web Designer</small></span><span class="small-chevron">⌄</span></button>
+            <div class="popover profile-menu" id="profileMenu" hidden><strong>Json Taylor</strong><small>Web Designer</small><button type="button">My Profile</button><button type="button">Account Settings</button><button type="button">Sign Out</button></div>
+          </div>
+        </div>
+      </header>
+
+      <main class="dashboard-content">
+        <div id="dashboardView">
+        <section class="welcome"><h1>Welcome back, Json Taylor !</h1><p>Track your sales activity, leads and deals here.</p></section>
+        <div class="dashboard-grid">
+          <section class="left-column" aria-label="Target and top deals">
+            <article class="target-card"><div class="target-decoration" aria-hidden="true"></div><div class="target-copy"><h2>Your target is<br>incomplete</h2><p>You have completed<br>48% of the given target,<br>you can also check your<br>status.</p><button class="text-action light-action" type="button" data-view="Target details">View Details <span>→</span></button></div><div class="progress-ring" role="img" aria-label="Target 48 percent complete"><span>48%</span></div></article>
+            <article class="card top-deals-card"><div class="card-heading"><h2>Top Deals</h2><button type="button" class="view-all" data-view="Top deals">View All <span>→</span></button></div><div class="top-deals-list" id="topDealsList"></div></article>
+            <article class="card profit-card"><div class="card-heading"><h2>Profit Earned</h2><button type="button" class="view-all" data-view="Profit earned">View All <span>→</span></button></div><div class="profit-chart" role="img" aria-label="Profit earned bar chart"><div class="profit-axis"><span>150</span><span>100</span><span>50</span><span>0</span></div><div class="profit-plot"><div class="profit-gridlines"><i></i><i></i><i></i></div><div class="profit-bars" id="profitBars"></div></div></div></article>
+          </section>
+
+          <section class="center-column" aria-label="Sales analytics">
+            <div class="stats-grid" id="statsGrid"></div>
+            <article class="card revenue-card">
+              <div class="card-heading"><h2>Revenue Analytics</h2><button type="button" class="view-all" data-view="Revenue analytics">View All <span>→</span></button></div>
+              <div class="chart-subtitle">Revenue Analytics with sales &amp; profit (USD)</div>
+              <div class="chart-tools" aria-label="Chart controls">
+                <button type="button" data-chart="zoom-in" aria-label="Zoom in"><span data-icon="plusCircle"></span></button>
+                <button type="button" data-chart="zoom-out" aria-label="Zoom out"><span data-icon="minusCircle"></span></button>
+                <button type="button" data-chart="reset" aria-label="Reset chart"><span data-icon="home"></span></button>
+                <button type="button" data-chart="download" aria-label="Download chart"><span data-icon="download"></span></button>
+                <button type="button" data-chart="menu" aria-label="Chart options"><span data-icon="menu"></span></button>
+              </div>
+              <div class="revenue-chart-wrap" id="revenueChart"><div class="revenue-axis"><span>$1000</span><span>$800</span><span>$600</span><span>$400</span><span>$200</span><span>$0</span></div>
+                <svg class="revenue-chart" viewBox="0 0 600 190" preserveAspectRatio="none" role="img" aria-label="Sales, revenue and profit from January to December">
+                  <defs><linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#ff8a26" stop-opacity=".18"/><stop offset="1" stop-color="#ff8a26" stop-opacity="0"/></linearGradient></defs>
+                  <path class="chart-gridline" d="M0 18H600M0 50H600M0 82H600M0 114H600M0 146H600M0 178H600"/>
+                  <path class="chart-area" d="M0 166 C20 158 24 128 48 120 S82 154 102 134 S131 99 150 115 S182 148 201 131 S230 100 252 96 S282 121 300 102 S335 69 351 83 S380 117 400 94 S427 63 449 79 S478 126 498 112 S523 75 548 93 S577 139 600 127 V178 H0Z"/>
+                  <path class="chart-line chart-line-sales" d="M0 166 C27 158 31 143 50 125 S86 145 103 134 S132 97 151 115 S180 150 201 130 S231 100 253 96 S283 118 300 102 S334 65 351 82 S380 118 400 94 S429 62 449 79 S478 126 498 112 S525 77 548 92 S578 137 600 127"/>
+                  <path class="chart-line chart-line-revenue" d="M0 170 C30 165 44 153 64 145 S95 154 115 147 S143 124 165 138 S200 150 220 140 S251 112 274 116 S305 146 328 130 S352 95 376 112 S410 148 434 132 S465 115 486 127 S521 157 545 140 S580 130 600 155"/>
+                  <path class="chart-line chart-line-profit" d="M0 167 C21 161 31 108 52 89 S84 98 105 112 S140 139 159 122 S190 86 208 95 S240 118 260 88 S291 63 310 87 S341 115 363 101 S393 72 414 88 S445 124 466 109 S496 89 516 110 S547 139 568 120 S589 138 600 153"/>
+                </svg><div class="month-labels"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span></div>
+              </div>
+              <div class="chart-legend"><span><i class="legend-dot sales"></i>Sales</span><span><i class="legend-dot revenue"></i>Revenue</span><span><i class="legend-dashed"></i>Profit</span></div>
+            </article>
+          </section>
+
+          <section class="right-column" aria-label="Lead and deal summaries">
+            <article class="card sources-card"><div class="card-heading"><h2>Leads By Source</h2><button class="card-menu" type="button" aria-label="Leads menu">⋮</button></div><div class="donut-wrap"><div class="donut-chart"><div class="donut-hole"><span>Total</span><strong>4,145</strong></div></div></div><div class="source-legend" id="sourceLegend"></div></article>
+            <article class="card deals-status-card"><div class="card-heading"><h2>Deals Status</h2><button type="button" class="view-all" data-view="Deals status">View All <span>→</span></button></div><div class="deals-total"><strong>4,289</strong><span class="comparison">1.02 <b>↑</b></span><small>compared to last week</small></div><div class="status-progress"><span></span></div><div class="deal-status-list" id="dealStatusList"></div></article>
+            <article class="card activity-card"><div class="card-heading"><h2>Recent Activity</h2><button type="button" class="view-all" data-view="Recent activity">View All <span>→</span></button></div><ol class="activity-list" id="activityList"></ol><button class="show-more" id="showMore" type="button">Show More</button></article>
+          </section>
+
+          <section class="card table-card" aria-label="Deals statistics">
+            <div class="table-toolbar"><div class="card-heading"><h2>Deals Statistics</h2></div><div class="table-actions"><label class="table-search"><span data-icon="search"></span><input id="tableSearch" type="search" placeholder="Search here..." aria-label="Search deals"></label><button class="sort-button" id="sortButton" type="button" aria-label="Sort deals">Sort By <span>⌄</span></button></div></div>
+            <div class="table-scroll"><table class="deals-table"><thead><tr><th class="select-cell"><input id="selectAll" type="checkbox" aria-label="Select all deals"></th><th>Sales Rep.</th><th>Category</th><th>Mail</th><th>Location</th><th>Date</th><th>Amount</th><th>Action</th></tr></thead><tbody id="dealsTableBody"></tbody></table></div>
+            <div class="table-footer"><span id="entryCount">Showing 5 Entries</span><nav class="pagination" aria-label="Deals pages"><button type="button" data-page="prev" aria-label="Previous page" disabled>Prev</button><button type="button" data-page="1" class="current" aria-current="page">1</button><button type="button" data-page="2" disabled>2</button><button type="button" data-page="next" aria-label="Next page" disabled>Next</button></nav></div>
+          </section>
+        </div>
+        </div>
+        <section class="admin-page-view" id="adminPageView" aria-live="polite" hidden>
+          <div class="admin-page-heading">
+            <div><p class="page-eyebrow" id="pageEyebrow">WORKSPACE</p><h1 id="pageTitle">CRM</h1><p id="pageDescription"></p></div>
+            <div class="page-heading-actions"><span class="demo-badge"><i></i>Demo data</span><button class="page-primary-button" id="pagePrimaryAction" type="button">Create new</button></div>
+          </div>
+          <div class="page-metrics" id="pageMetrics"></div>
+          <div class="page-tabs" id="pageTabs" role="tablist"></div>
+          <div class="page-layout" id="pageLayout"></div>
+          <p class="page-demo-note">UI preview only · Sample data is stored in this page session and is not sent to a server.</p>
+        </section>
+        <footer class="dashboard-footer">© 2026 <strong>Nexora.</strong> Designed with <span class="heart">♥</span> by codepsanda.com. All Rights Reserved.</footer>
+      </main>
+    </div>
+    <div class="mobile-backdrop" id="mobileBackdrop" hidden></div>
+    <dialog class="demo-dialog" id="demoDialog">
+      <form method="dialog" id="demoDialogForm">
+        <div class="demo-dialog-heading"><div><p class="page-eyebrow">DEMO ACTION</p><h2 id="demoDialogTitle">Create item</h2></div><button class="demo-dialog-close" type="button" id="demoDialogClose" aria-label="Close dialog">×</button></div>
+        <div class="demo-dialog-fields" id="demoDialogFields"></div>
+        <div class="demo-dialog-actions"><button class="dialog-cancel" type="button" id="demoDialogCancel">Cancel</button><button class="page-primary-button" type="submit">Add to preview</button></div>
+      </form>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>RAFFA Admin Console</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles/admin.css">
+  <script src="assets/js/siteContent.js" defer></script>
+  <script src="assets/js/admin.js" defer></script>
+</head>
+<body>
+  <div class="admin-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="admin.html" aria-label="RAFFA admin home">
+        <span class="brand-mark" aria-hidden="true">R</span>
+        <span class="brand-name">RAFFA <small>ADMIN</small></span>
+      </a>
+      <nav class="side-nav" id="sideNav" aria-label="Admin sections">
+        <p class="nav-heading">WORKSPACE</p>
+        <button class="nav-item active" type="button" data-section="overview"><span class="nav-icon" aria-hidden="true">⌂</span><span>Overview</span></button>
+        <p class="nav-heading nav-heading-spaced">WEBSITE CONTENT</p>
+        <button class="nav-item" type="button" data-section="projects"><span class="nav-icon" aria-hidden="true">▧</span><span>Architecture</span><span class="nav-count" id="projectsCount">0</span></button>
+        <button class="nav-item" type="button" data-section="apparel"><span class="nav-icon" aria-hidden="true">▣</span><span>Apparels</span><span class="nav-count" id="apparelCount">0</span></button>
+        <button class="nav-item" type="button" data-section="desserts"><span class="nav-icon" aria-hidden="true">◇</span><span>Desserts</span><span class="nav-count" id="dessertsCount">0</span></button>
+        <p class="nav-heading nav-heading-spaced">CUSTOMER REQUESTS</p>
+        <button class="nav-item" type="button" data-section="orders"><span class="nav-icon" aria-hidden="true">◷</span><span>Dessert orders</span><span class="nav-count" id="ordersCount">0</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <span class="storage-label">CONTENT STORAGE</span>
+        <p>Website edits are saved in this browser.</p>
+        <button class="sidebar-link" id="resetButton" type="button">Restore sample content</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="menu-button" id="sidebarToggle" type="button" aria-label="Toggle navigation" aria-expanded="true"><span></span><span></span><span></span></button>
+        <label class="global-search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg>
+          <input id="globalSearch" type="search" placeholder="Search your content" autocomplete="off" aria-label="Search content">
+          <kbd>/</kbd>
+        </label>
+        <div class="top-actions">
+          <span class="save-indicator"><i></i><span id="saveStatus">Changes saved in this browser</span></span>
+          <button class="icon-button" id="themeToggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">☾</button>
+          <a class="icon-button" href="index.html" aria-label="Open RAFFA website" title="Open website">↗</a>
+          <button class="profile-button" id="profileButton" type="button" aria-label="RAFFA administrator">R</button>
+        </div>
+      </header>
+
+      <div class="page-toolbar">
+        <div class="breadcrumbs"><a href="admin.html">RAFFA</a><span>/</span><span id="breadcrumbCurrent">Overview</span></div>
+        <button class="icon-button refresh-button" id="refreshButton" type="button" aria-label="Refresh content" title="Refresh content">⟳</button>
+      </div>
+
+      <section class="workspace">
+        <div class="page-heading">
+          <div>
+            <p class="eyebrow" id="pageEyebrow">YOUR WORKSPACE</p>
+            <h1 id="pageTitle">Welcome to RAFFA Admin</h1>
+            <p id="pageDescription">Manage your website content and review dessert requests.</p>
+          </div>
+          <button class="primary-button" id="createButton" type="button"><span aria-hidden="true">＋</span> Add content</button>
+        </div>
+
+        <section class="overview-panel" id="overviewPanel" aria-label="Website overview">
+          <div class="summary-grid" id="summaryGrid"></div>
+          <div class="overview-grid">
+            <article class="card overview-content-card">
+              <div class="card-heading"><div><h2>Website content</h2><p>Content shown across your RAFFA pages</p></div></div>
+              <div class="page-cards" id="pageCards"></div>
+            </article>
+            <article class="card overview-orders-card">
+              <div class="card-heading"><div><h2>Recent dessert requests</h2><p>Requests saved in this browser</p></div><button type="button" class="view-all" data-open-section="orders">View all <span>→</span></button></div>
+              <div class="recent-orders" id="recentOrders"></div>
+              <p class="local-orders-note">Requests sent to the bakery server are not available in this browser-only admin view.</p>
+            </article>
+          </div>
+          <article class="card welcome-card">
+            <div class="welcome-copy"><span class="welcome-icon" aria-hidden="true">✦</span><div><h2>Keep your website fresh</h2><p>Update project details, refresh your apparel catalog, or add new dessert flavors. Changes are saved on this device.</p></div></div>
+            <a href="index.html">Preview website <span>↗</span></a>
+          </article>
+        </section>
+
+        <section class="content-panel" id="contentPanel" hidden>
+          <div class="section-heading">
+            <div><h2 id="listTitle">Content</h2><p id="listSubtitle"></p></div>
+            <div class="list-actions">
+              <label class="filter-box"><span aria-hidden="true">⌕</span><input id="sectionSearch" type="search" placeholder="Filter items" aria-label="Filter items"></label>
+              <button class="view-button" id="viewToggle" type="button" aria-label="Toggle compact view" title="Toggle compact view">☷</button>
+            </div>
+          </div>
+          <div class="data-table-wrap" id="dataTable"></div>
+          <p class="empty-state" id="emptyState" hidden></p>
+          <p class="status-message" id="statusMessage" role="status" aria-live="polite"></p>
+          <p class="privacy-note" id="privacyNote"></p>
+        </section>
+      </section>
+      <footer class="footer">© <span id="year"></span> <strong>RAFFA Events.</strong> Admin console</footer>
+    </main>
+    <div class="mobile-backdrop" id="mobileBackdrop" hidden></div>
+  </div>
+
+  <dialog class="edit-dialog" id="editDialog">
+    <form id="editForm">
+      <div class="dialog-heading">
+        <div><p class="eyebrow">CONTENT DETAILS</p><h2 id="dialogTitle">New item</h2></div>
+        <button class="close-button" id="closeDialog" type="button" aria-label="Close dialog">×</button>
+      </div>
+      <div id="formFields" class="form-fields"></div>
+      <p class="form-error" id="formError" role="alert"></p>
+      <div class="dialog-actions">
+        <button class="secondary-button" id="cancelDialog" type="button">Cancel</button>
+        <button class="primary-button" type="submit">Save changes</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="edit-dialog section-picker" id="sectionPicker">
+    <div class="section-picker-content">
+      <div class="dialog-heading">
+        <div><p class="eyebrow">WEBSITE CONTENT</p><h2>Choose a page</h2></div>
+        <button class="close-button" id="closeSectionPicker" type="button" aria-label="Close dialog">×</button>
+      </div>
+      <p class="picker-description">Choose where this content should appear.</p>
+      <div class="picker-options">
+        <button type="button" data-section-option="projects"><span>▧</span><strong>Architecture</strong></button>
+        <button type="button" data-section-option="apparel"><span>▣</span><strong>Apparels</strong></button>
+        <button type="button" data-section-option="desserts"><span>◇</span><strong>Desserts</strong></button>
+      </div>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

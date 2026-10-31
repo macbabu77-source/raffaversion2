@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RAFFA — The Cake Experience</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles/header.css">
+<link rel="stylesheet" href="assets/styles/desserts.css">
+<link rel="stylesheet" href="assets/styles/footer.css">
+<link rel="stylesheet" href="assets/styles/public-mobile.css">
+<script src="assets/js/header.js" defer></script>
+<script src="assets/js/public-mobile.js" defer></script>
+<script src="assets/js/siteContent.js" defer></script>
+<script src="assets/js/desserts.js" defer></script>
+<script src="assets/js/footer.js" defer></script>
+</head>
+<body id="top">
+
+<header id="siteHeader">
+  <div class="wrap header-inner">
+    <a href="index.html" aria-label="Home">
+      <span class="logo-word">RAFFA</span>
+      <span class="logo-tag">THE CAKE EXPERIENCE</span>
+    </a>
+    <nav class="primary" id="primaryNav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="apparels.html">Apparels</a>
+      <a href="desserts.html" class="active" aria-current="page">Desserts</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="searchToggle" type="button" aria-label="Search cake flavors" aria-expanded="false" aria-controls="flavorSearch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg></button>
+      <button class="icon-btn cart-toggle" id="cartToggle" type="button" aria-label="Open cart" aria-haspopup="dialog" aria-controls="cartDialog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3 H5 L7.5 15 H18 L21 6 H6"/></svg><span class="cart-count" id="cartCount" aria-live="polite">0</span></button>
+      <a class="home-pill" href="index.html">Home</a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav">
+        <svg viewBox="0 0 20 16" width="18" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="0" y1="1" x2="20" y2="1"/><line x1="0" y1="8" x2="20" y2="8"/><line x1="0" y1="15" x2="20" y2="15"/></svg>
+      </button>
+    </div>
+  </div>
+  <form class="flavor-search" id="flavorSearch" hidden role="search">
+    <label class="sr-only" for="flavorQuery">Search cake flavors</label>
+    <input id="flavorQuery" type="search" placeholder="Search flavors" autocomplete="off">
+    <p class="search-status" id="searchStatus" role="status" hidden></p>
+  </form>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="hero-eyebrow">Don't Just</p>
+      <h1>Have a Slice.<br>Have a Moment.</h1>
+      <p class="desc">More than just cakes — we create edible moments, crafted with love, for your most special days.</p>
+      <span class="scroll-cue"><span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 3 V13 M4 9 L8 13 L12 9"/></svg></span>Scroll to Explore</span>
+    </div>
+    <div class="hero-visual">
+      <div class="cake-photo"></div>
+      <p class="annotation">Pure indulgence<br>in every bite</p>
+      <div class="flavor-list">
+        <button class="flavor-row active" type="button" data-name="Chocolate Truffle" data-description="Layers of moist chocolate sponge, velvety ganache and a hint of cocoa, finished with handcrafted chocolate curls." aria-pressed="true"><span class="dot dot-choc"></span>Chocolate<span class="arrow" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12 L12 4 M6 4 H12 V10"/></svg></span></button>
+        <button class="flavor-row" type="button" data-name="Vanilla Bean" data-description="Soft vanilla sponge layered with smooth vanilla cream and finished with delicate bean-speckled frosting." aria-pressed="false"><span class="dot dot-van"></span>Vanilla</button>
+        <button class="flavor-row" type="button" data-name="Strawberry Cloud" data-description="Tender sponge, fresh strawberry filling and a light cream finish make this a bright celebratory favorite." aria-pressed="false"><span class="dot dot-straw"></span>Strawberry</button>
+        <button class="flavor-row" type="button" data-name="Red Velvet" data-description="A tender cocoa sponge paired with tangy cream cheese frosting for a classic, balanced slice." aria-pressed="false"><span class="dot dot-red"></span>Red Velvet</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MOOD ================= -->
+<section class="mood">
+  <div class="wrap mood-grid">
+    <div>
+      <p class="eyebrow">Choose Your Mood</p>
+      <h2>Mood</h2>
+      <p class="sub">Because every feeling deserves a cake.</p>
+    </div>
+    <div class="mood-cards">
+      <button class="mood-card selected" type="button" data-flavor="Chocolate Truffle" aria-pressed="true">
+        <span class="mood-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="13" r="7"/><path d="M8 8 C9 5 15 5 16 8"/></svg></span>
+        <span class="label">I NEED<br>CHOCOLATE</span>
+        <span class="mood-arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12 L12 4 M6 4 H12 V10"/></svg></span>
+      </button>
+      <button class="mood-card" type="button" data-flavor="Strawberry Cloud" aria-pressed="false">
+        <span class="mood-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20 C6 16 3 12.5 3 8.5 A4.5 4.5 0 0 1 12 7 A4.5 4.5 0 0 1 21 8.5 C21 12.5 18 16 12 20 Z"/></svg></span>
+        <span class="label">I'M IN<br>LOVE</span>
+        <span class="mood-arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12 L12 4 M6 4 H12 V10"/></svg></span>
+      </button>
+      <button class="mood-card" type="button" data-flavor="Red Velvet" aria-pressed="false">
+        <span class="mood-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20 L4 13 C4 10 7 8 12 8 C17 8 20 10 20 13 V20"/><line x1="12" y1="8" x2="12" y2="4"/><circle cx="12" cy="3" r="1.2"/></svg></span>
+        <span class="label">I'M<br>CELEBRATING</span>
+        <span class="mood-arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12 L12 4 M6 4 H12 V10"/></svg></span>
+      </button>
+      <button class="mood-card" type="button" data-flavor="Vanilla Bean" aria-pressed="false">
+        <span class="mood-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 4 C13 8 16 9 20 10 C16 11 13 12 12 16 C11 12 8 11 4 10 C8 9 11 8 12 4 Z"/></svg></span>
+        <span class="label">I WANT SOMETHING<br>BEAUTIFUL</span>
+        <span class="mood-arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12 L12 4 M6 4 H12 V10"/></svg></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEATURED CAKE ================= -->
+<section class="featured" id="featured">
+  <span class="ghost-text" aria-hidden="true">CHOCOL</span>
+  <div class="wrap featured-grid">
+    <div class="f-photo-wrap">
+      <button class="f-cake" id="cakeSpin" type="button" aria-label="Rotate featured cake"><span class="double-click">Tap or double-click<br>to see the magic</span></button>
+      <span class="rotate-360"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M12 4 A8 8 0 0 1 20 12"/></svg>360°</span>
+    </div>
+    <div>
+      <p class="eyebrow">Featured Cake</p>
+      <h2 id="cakeName">Chocolate Truffle</h2>
+      <p class="tagline">Rich. Smooth. Irresistible.</p>
+      <p class="desc" id="cakeDescription">Layers of moist chocolate sponge, velvety ganache and a hint of cocoa, finished with handcrafted chocolate curls.</p>
+      <div class="size-row" id="sizeRow" role="group" aria-label="Choose a size">
+        <button type="button" class="size-btn" data-size="Small" data-price="899" aria-pressed="false">Small<span>Serves 4–6</span></button>
+        <button type="button" class="size-btn active" data-size="Medium" data-price="1299" aria-pressed="true">Medium<span>Serves 8–10</span></button>
+        <button type="button" class="size-btn" data-size="Large" data-price="1799" aria-pressed="false">Large<span>Serves 12–15</span></button>
+      </div>
+      <p class="price" id="cakePrice">₹1,299</p>
+      <button type="button" class="btn btn-dark" id="addToCart">Add to Cart<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12 L12 4 M6 4 H12 V10"/></svg></button>
+    </div>
+    <div class="feat-list">
+      <div class="feat-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3 L14 9 L20 9 L15 13 L17 19 L12 15 L7 19 L9 13 L4 9 L10 9 Z"/></svg><span>Premium Ingredients</span></div>
+      <div class="feat-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="9" width="16" height="11" rx="1.5"/><path d="M7 9 V6 a5 5 0 0 1 10 0 V9"/></svg><span>Freshly Baked Daily</span></div>
+      <div class="feat-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 12 H16 M12 8 V16"/></svg><span>Customisable for Every Occasion</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section class="process">
+  <div class="wrap process-grid">
+    <div>
+      <h2>The Cake<br>Comes Alive</h2>
+      <p class="sub">Scroll to watch the magic unfold.</p>
+      <span class="scroll-cue"><span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 3 V13 M4 9 L8 13 L12 9"/></svg></span>Scroll</span>
+    </div>
+    <div class="stage-row">
+      <div class="stage"><div class="stage-photo sp1"></div><span class="stage-num">01</span><h3>The Base</h3><p>It all starts with a simple sponge.</p></div>
+      <span class="stage-arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8 H14 M9 3 L14 8 L9 13"/></svg></span>
+      <div class="stage"><div class="stage-photo sp2"></div><span class="stage-num">02</span><h3>The Cream</h3><p>A layer of indulgence.</p></div>
+      <span class="stage-arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8 H14 M9 3 L14 8 L9 13"/></svg></span>
+      <div class="stage"><div class="stage-photo sp3"></div><span class="stage-num">03</span><h3>The Ganache</h3><p>Smooth, rich, irresistible.</p></div>
+      <span class="stage-arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8 H14 M9 3 L14 8 L9 13"/></svg></span>
+      <div class="stage"><div class="stage-photo sp4"></div><span class="stage-num">04</span><h3>The Decoration</h3><p>Because it's not just cake, it's a feeling.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CAKE DNA ================= -->
+<section class="dna" id="dna">
+  <div class="wrap dna-grid" style="position:relative;">
+    <div>
+      <p class="eyebrow">Inside the Cake</p>
+      <h2>The Cake DNA</h2>
+      <p class="sub">Layers of love, in every bite.</p>
+      <a href="#cakeLayers" class="btn btn-dark">Explore Layers<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12 L12 4 M6 4 H12 V10"/></svg></a>
+    </div>
+    <div class="dna-slice"></div>
+    <ul class="dna-list" id="cakeLayers">
+      <li><span class="dna-num">01</span><div><h3>Belgian Chocolate</h3><p>Rich &amp; velvety ganache</p></div></li>
+      <li><span class="dna-num">02</span><div><h3>Whipped Cream</h3><p>Light &amp; airy</p></div></li>
+      <li><span class="dna-num">03</span><div><h3>Cocoa Sponge</h3><p>Moist &amp; soft</p></div></li>
+      <li><span class="dna-num">04</span><div><h3>Chocolate Crunch</h3><p>For that perfect bite</p></div></li>
+    </ul>
+    <div class="dna-badge">Real Ingredients<br>Better Moments ♥</div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="testimonials" id="reviews">
+  <div class="wrap">
+    <div class="test-head">
+      <h2>Sweet Words From Our Customers</h2>
+      <div class="carousel-arrows">
+        <button type="button" data-review-direction="previous" aria-label="Previous review"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 3 L5 8 L10 13"/></svg></button>
+        <button type="button" data-review-direction="next" aria-label="Next review"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3 L11 8 L6 13"/></svg></button>
+      </div>
+    </div>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="test-top"><span class="avatar av1"></span><span class="stars">★★★★★</span></div>
+        <p>"The cake was beyond my expectations! Absolutely delicious and beautifully presented."</p>
+        <span class="name">— Ananya S.</span>
+      </div>
+      <div class="test-card">
+        <div class="test-top"><span class="avatar av2"></span><span class="stars">★★★★★</span></div>
+        <p>"Every bite felt like a celebration. The best cake I've ever had!"</p>
+        <span class="name">— Riya M.</span>
+      </div>
+      <div class="test-card">
+        <div class="test-top"><span class="avatar av3"></span><span class="stars">★★★★★</span></div>
+        <p>"Incredible taste, stunning design and super fresh. Highly recommend!"</p>
+        <span class="name">— Karan P.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CLOSING CTA / FOOTER ================= -->
+<footer class="closing" id="contact">
+  <div class="closing-bg" aria-hidden="true"></div>
+  <div class="wrap closing-inner">
+    <p class="eyebrow">It's More Than Cake</p>
+    <h2>Make Something Worth Remembering.</h2>
+    <span class="closing-note">Life is sweeter<br>with cake</span>
+    <a href="#featured" class="btn">Choose Your Cake<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12 L12 4 M6 4 H12 V10"/></svg></a>
+
+    <div class="closing-bottom">
+      <div>
+        <span class="logo-word">RAFFA</span>
+        <span class="logo-tag">THE CAKE EXPERIENCE</span>
+      </div>
+      <a class="home-pill" href="index.html">← Back to Home</a>
+      <div class="footer-icons">
+        <button type="button" id="likePage" aria-label="Like this page" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 20 C6 16 3 12.5 3 8.5 A4.5 4.5 0 0 1 12 7 A4.5 4.5 0 0 1 21 8.5 C21 12.5 18 16 12 20 Z"/></svg></button>
+        <button type="button" id="sharePage" aria-label="Share this page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="6" r="2.6"/><circle cx="18" cy="18" r="2.6"/><line x1="8.3" y1="10.8" x2="15.7" y2="7.2"/><line x1="8.3" y1="13.2" x2="15.7" y2="16.8"/></svg></button>
+        <a href="#top" aria-label="Scroll to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 18 V6 M7 11 L12 6 L17 11"/></svg></a>
+      </div>
+      <span class="sr-only" id="shareStatus" aria-live="polite"></span>
+    </div>
+  </div>
+</footer>
+
+<dialog class="cart-dialog" id="cartDialog" aria-labelledby="cartTitle">
+  <div class="cart-dialog-inner">
+    <div class="cart-head">
+      <h2 id="cartTitle">Your Cake Order</h2>
+      <button type="button" class="cart-close" id="closeCart" aria-label="Close cart">×</button>
+    </div>
+    <p id="cartEmpty">Your cart is empty. Choose a flavor to get started.</p>
+    <ul class="cart-items" id="cartItems"></ul>
+    <p class="cart-total" id="cartTotal" hidden></p>
+    <form class="checkout-form" id="checkoutForm" hidden>
+      <h3>Save an order request</h3>
+      <label>Name<input name="customerName" autocomplete="name" required></label>
+      <label>Email<input name="customerEmail" type="email" autocomplete="email" required></label>
+      <label>Phone (optional)<input name="customerPhone" type="tel" autocomplete="tel" pattern="[0-9+\-\s()]{7,20}"></label>
+      <label>Preferred date<input name="preferredDate" id="preferredDate" type="date"></label>
+      <label>Notes<textarea name="orderNotes" rows="2"></textarea></label>
+      <button class="btn btn-dark" type="submit">Save Request</button>
+    </form>
+    <p class="order-status" id="orderStatus" role="status" hidden></p>
+    <p class="cart-notice">If the bakery's system can't be reached, your request is saved in this browser only.</p>
+    <details class="order-history" id="orderHistory">
+      <summary>View my saved order requests</summary>
+      <ul id="orderHistoryList"></ul>
+      <p id="orderHistoryEmpty" hidden>No saved requests yet.</p>
+    </details>
+  </div>
+</dialog>
+
+</body>
+</html>

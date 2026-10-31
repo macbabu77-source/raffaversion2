@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RAFA — Architecture & Construction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles/header.css">
+<link rel="stylesheet" href="assets/styles/index.css">
+<link rel="stylesheet" href="assets/styles/footer.css">
+<link rel="stylesheet" href="assets/styles/public-mobile.css">
+<script src="assets/js/header.js" defer></script>
+<script src="assets/js/public-mobile.js" defer></script>
+<script src="assets/js/siteContent.js" defer></script>
+<script src="assets/js/index.js" defer></script>
+<script src="assets/js/footer.js" defer></script>
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo" aria-label="RAFA home">
+      <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M20 4 L36 34 L26 34 L20 21 L14 34 L4 34 Z" fill="var(--accent-gold)"/>
+      </svg>
+      <span class="logo-text">
+        <span class="logo-word">RAFA</span>
+        <span class="logo-tag">Architecture &amp; Construction</span>
+      </span>
+    </a>
+    <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+      <a href="index.html" class="active" aria-current="page">Home</a>
+      <a href="apparels.html">Apparels</a>
+      <a href="desserts.html">Desserts</a>
+    </nav>
+    <div class="header-actions">
+      <a href="#contact" class="btn btn-outline-dark">Get in Touch</a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav">
+        <svg viewBox="0 0 20 16" width="18" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <line x1="0" y1="1" x2="20" y2="1"/><line x1="0" y1="8" x2="20" y2="8"/><line x1="0" y1="15" x2="20" y2="15"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <span class="hero-rail" aria-hidden="true"><span></span><span></span></span>
+  <div class="wrap hero-inner">
+    <div class="hero-content">
+      <p class="eyebrow">Architecture That Inspires</p>
+      <h1>We Build<br><em>Timeless</em> Spaces.<br>Built Around You.</h1>
+      <p>From concept to completion, we craft extraordinary spaces that elevate living and stand the test of time.</p>
+      <a href="#projects" class="btn btn-fill">
+        Explore Our Work
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12 L12 4 M6 4 H12 V10"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="stats-bar-wrap">
+    <div class="wrap">
+      <div class="stats-bar">
+        <div class="stat">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="16" cy="12" r="7"/><path d="M11 18 L9 27 L16 23 L23 27 L21 18"/></svg>
+          <div><div class="stat-num">15+</div><div class="stat-label">Years of Experience</div></div>
+        </div>
+        <div class="stat">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="6" y="10" width="9" height="18"/><rect x="17" y="4" width="9" height="24"/><line x1="9" y1="14" x2="12" y2="14"/><line x1="9" y1="18" x2="12" y2="18"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="13" x2="23" y2="13"/></svg>
+          <div><div class="stat-num">320+</div><div class="stat-label">Projects Completed</div></div>
+        </div>
+        <div class="stat">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="12" cy="11" r="4"/><circle cx="22" cy="13" r="3.3"/><path d="M5 27 C5 21 9 18 12 18 C15 18 19 21 19 27"/><path d="M19 22 C19.5 20.5 21 19.5 22.5 19.5 C25.5 19.5 28 22.5 28 27"/></svg>
+          <div><div class="stat-num">98%</div><div class="stat-label">Client Satisfaction</div></div>
+        </div>
+        <div class="stat">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="16" cy="12" r="7"/><path d="M11 18 L9 27 L16 23 L23 27 L21 18"/><path d="M13 12 L15 14 L19.5 9.5"/></svg>
+          <div><div class="stat-num">25+</div><div class="stat-label">Industry Awards</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEATURED PROJECTS ================= -->
+<section class="light section-pad" id="projects">
+  <div class="wrap">
+    <div class="split" style="margin-bottom:56px;">
+      <div class="intro-block">
+        <p class="eyebrow">Featured Projects</p>
+        <h2 class="section-h2" style="font-size:var(--size-h2);">Spaces That Define Excellence</h2>
+      </div>
+      <div style="display:flex; align-items:flex-end; justify-content:flex-start;">
+        <a href="#projects" class="btn btn-outline-light">View All Projects
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12 L12 4 M6 4 H12 V10"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="project-grid">
+      <a class="project-tile p-tile-1" href="mailto:hello@RAFA.com?subject=Horizon%20Residence%20project%20inquiry">
+        <div class="photo photo-1"></div>
+        <div class="caption">
+          <div><h3>Horizon Residence</h3><span>Los Angeles, CA</span></div>
+          <span class="tile-arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12 L12 4 M6 4 H12 V10"/></svg></span>
+        </div>
+      </a>
+      <a class="project-tile p-tile-2" href="mailto:hello@RAFA.com?subject=Aurora%20Office%20Tower%20project%20inquiry">
+        <div class="photo photo-2"></div>
+        <div class="caption">
+          <div><h3>Aurora Office Tower</h3><span>New York, NY</span></div>
+          <span class="tile-arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12 L12 4 M6 4 H12 V10"/></svg></span>
+        </div>
+      </a>
+      <a class="project-tile p-tile-3" href="mailto:hello@RAFA.com?subject=Edgewood%20Villa%20project%20inquiry">
+        <div class="photo photo-3"></div>
+        <div class="caption">
+          <div><h3>Edgewood Villa</h3><span>Austin, TX</span></div>
+          <span class="tile-arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12 L12 4 M6 4 H12 V10"/></svg></span>
+        </div>
+      </a>
+      <a class="project-tile p-tile-4" href="mailto:hello@RAFA.com?subject=Maple%20Street%20Residences%20project%20inquiry">
+        <div class="photo photo-4"></div>
+        <div class="caption">
+          <div><h3>Maple Street Residences</h3><span>Seattle, WA</span></div>
+          <span class="tile-arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12 L12 4 M6 4 H12 V10"/></svg></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="dark section-pad" id="services">
+  <div class="wrap">
+    <div class="split" style="align-items:center;">
+      <div class="intro-block">
+        <p class="eyebrow">Our Services</p>
+        <h2 style="font-size:var(--size-h2); margin-bottom:18px;">End-to-End Solutions</h2>
+        <p>Integrated expertise across every stage of design and construction.</p>
+        <a href="#services" class="btn btn-outline-dark">Explore Services
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12 L12 4 M6 4 H12 V10"/></svg>
+        </a>
+      </div>
+
+      <div class="service-cols">
+        <div class="service-card">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="16" cy="9" r="3"/><path d="M16 12 L8 27 M16 12 L24 27 M11 22 H21"/></svg>
+          <h3>Architecture</h3>
+          <p>Concept-driven designs that blend creativity and functionality.</p>
+        </div>
+        <div class="service-card">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M6 16 L16 6 L26 16"/><path d="M9 14 V27 H23 V14"/><rect x="14" y="19" width="4" height="8"/></svg>
+          <h3>Residential Construction</h3>
+          <p>Bespoke homes built with precision and care.</p>
+        </div>
+        <div class="service-card">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="5" y="12" width="9" height="16"/><rect x="17" y="5" width="10" height="23"/><line x1="8" y1="16" x2="11" y2="16"/><line x1="8" y1="20" x2="11" y2="20"/><line x1="20" y1="10" x2="24" y2="10"/><line x1="20" y1="15" x2="24" y2="15"/><line x1="20" y1="20" x2="24" y2="20"/></svg>
+          <h3>Commercial Builds</h3>
+          <p>High-performance spaces for modern businesses.</p>
+        </div>
+        <div class="service-card">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M7 18 V12 a5 5 0 0 1 10 0 V18"/><path d="M4 18 H24 a3 3 0 0 1 3 3 V24 H7 a3 3 0 0 1 -3 -3 Z"/><line x1="7" y1="24" x2="7" y2="28"/><line x1="24" y1="24" x2="24" y2="28"/></svg>
+          <h3>Interiors</h3>
+          <p>Beautiful, functional interiors tailored to your lifestyle.</p>
+        </div>
+        <div class="service-card">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="8" y="6" width="14" height="22" rx="1.5"/><rect x="12" y="4" width="6" height="4" rx="1"/><line x1="12" y1="14" x2="18" y2="14"/><line x1="12" y1="19" x2="18" y2="19"/><path d="M12 24 L14 26 L18 22"/></svg>
+          <h3>Project Management</h3>
+          <p>Seamless execution from concept to completion.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= APPAREL EDIT ================= -->
+<section class="light section-pad home-apparel" id="apparel-edit">
+  <div class="wrap">
+    <div class="home-feature-heading">
+      <div>
+        <p class="eyebrow">The RAFA Edit</p>
+        <h2>Everyday, with intention.</h2>
+        <p>Considered layers, beautifully made accessories, and pieces that make getting dressed feel effortless.</p>
+      </div>
+      <a class="btn btn-outline-light" href="apparels.html">Explore Apparels
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12 L12 4 M6 4 H12 V10"/></svg>
+      </a>
+    </div>
+    <div class="home-apparel-layout">
+      <div class="home-apparel-aside">
+        <span class="feature-index">01 / THE WARDROBE</span>
+        <h3>Find your next<br><em>forever favorite.</em></h3>
+        <p>From soft tailoring to the finishing touch, discover a curated collection made to work harder and wear longer.</p>
+        <div class="home-apparel-filters" role="group" aria-label="Filter featured apparel">
+          <button class="home-filter active" type="button" data-home-category="all" aria-pressed="true">All pieces</button>
+          <button class="home-filter" type="button" data-home-category="clothes" aria-pressed="false">Clothing</button>
+          <button class="home-filter" type="button" data-home-category="shoes" aria-pressed="false">Shoes</button>
+          <button class="home-filter" type="button" data-home-category="handbags" aria-pressed="false">Bags</button>
+          <button class="home-filter" type="button" data-home-category="accessories" aria-pressed="false">Accessories</button>
+        </div>
+        <a class="text-arrow-link" href="apparels.html#catalog">Shop the full collection <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="home-apparel-grid" id="homeApparelGrid" aria-live="polite" aria-label="Featured apparel"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DESSERTS FEATURE ================= -->
+<section class="home-desserts" id="dessert-feature">
+  <div class="wrap home-dessert-layout">
+    <div class="home-dessert-visual">
+      <div class="dessert-image" id="homeDessertImage" role="img" aria-label="Featured handcrafted cake"></div>
+      <span class="dessert-image-note"><span>MADE FOR</span><strong>your moments</strong></span>
+      <span class="dessert-image-count">RAFFA · THE CAKE EXPERIENCE</span>
+    </div>
+    <div class="home-dessert-copy">
+      <p class="eyebrow">A Little Something Sweet</p>
+      <span class="feature-index">02 / THE CELEBRATION</span>
+      <h2>Some moments<br>deserve <em>cake.</em></h2>
+      <p class="dessert-intro">Thoughtfully layered, beautifully finished, and baked to make the moment yours.</p>
+      <div class="dessert-flavor-picker">
+        <span class="picker-label">CHOOSE YOUR CRAVING</span>
+        <div class="home-flavor-options" id="homeFlavorOptions" role="group" aria-label="Choose a featured cake flavor"></div>
+      </div>
+      <div class="home-flavor-detail" aria-live="polite">
+        <div class="home-flavor-title"><span class="flavor-swatch" id="homeFlavorSwatch"></span><h3 id="homeFlavorName">Chocolate Truffle</h3></div>
+        <p id="homeFlavorDescription">Layers of moist chocolate sponge, velvety ganache and a hint of cocoa, finished with handcrafted chocolate curls.</p>
+      </div>
+      <div class="home-dessert-actions">
+        <a class="btn btn-dessert" href="desserts.html#featured">Discover the cake menu
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12 L12 4 M6 4 H12 V10"/></svg>
+        </a>
+        <span>Hand-finished · baked with care</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section class="light section-pad" id="about">
+  <div class="wrap">
+    <div class="split process-wrap" style="align-items:start;">
+      <div class="intro-block">
+        <p class="eyebrow">Our Process</p>
+        <h2 style="font-size:var(--size-h2); margin-bottom:26px;">A Seamless Journey From Vision to Reality</h2>
+        <a href="#about" class="btn btn-outline-light">How We Work
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12 L12 4 M6 4 H12 V10"/></svg>
+        </a>
+      </div>
+
+      <div style="position:relative;">
+        <svg class="process-decor" viewBox="0 0 200 220" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+          <path d="M20 220 V90 L100 20 L180 90 V220"/><path d="M40 220 V110 H160 V220"/><line x1="20" y1="140" x2="180" y2="140"/><line x1="20" y1="170" x2="180" y2="170"/>
+        </svg>
+        <div class="process-steps">
+          <div class="step"><span class="step-badge">01</span><h3>Discover</h3><p>Understanding your vision, goals, and requirements.</p></div>
+          <div class="step"><span class="step-badge">02</span><h3>Design</h3><p>Crafting intelligent designs that inspire and perform.</p></div>
+          <div class="step"><span class="step-badge">03</span><h3>Build</h3><p>Expert construction with quality and precision.</p></div>
+          <div class="step"><span class="step-badge">04</span><h3>Deliver</h3><p>On-time delivery with attention to every detail.</p></div>
+          <div class="step"><span class="step-badge">05</span><h3>Beyond</h3><p>Ongoing support to ensure lasting satisfaction.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INSIGHTS ================= -->
+<section class="dark section-pad" id="insights">
+  <div class="wrap">
+    <div class="split" style="margin-bottom:56px; align-items:flex-end;">
+      <div class="intro-block" style="margin-bottom:0;">
+        <p class="eyebrow">Insights</p>
+        <h2 style="font-size:var(--size-h2);">Ideas. Trends. Inspiration.</h2>
+      </div>
+      <div>
+        <a href="#insights" class="btn btn-outline-dark">View All Articles
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12 L12 4 M6 4 H12 V10"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="insight-cards">
+      <article class="insight-card">
+        <div class="thumb"><div class="photo photo-5" style="position:absolute;inset:0;"></div><span class="date-badge">May 12, 2024</span></div>
+        <h3>The Future of Sustainable Architecture</h3>
+        <details class="insight-more"><summary class="read-more">Read Article <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12 L12 4 M6 4 H12 V10"/></svg></summary><p>Thoughtful material choices, passive design, and long-lasting construction can reduce a building's impact while making it more comfortable to live in.</p></details>
+      </article>
+      <article class="insight-card">
+        <div class="thumb"><div class="photo photo-6" style="position:absolute;inset:0;"></div><span class="date-badge">Apr 28, 2024</span></div>
+        <h3>Designing Homes That Adapt to You</h3>
+        <details class="insight-more"><summary class="read-more">Read Article <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12 L12 4 M6 4 H12 V10"/></svg></summary><p>Flexible layouts, durable finishes, and carefully planned storage help a home adapt as routines and family needs change.</p></details>
+      </article>
+      <article class="insight-card">
+        <div class="thumb"><div class="photo photo-7" style="position:absolute;inset:0;"></div><span class="date-badge">Apr 10, 2024</span></div>
+        <h3>Smart Materials for a Better Tomorrow</h3>
+        <details class="insight-more"><summary class="read-more">Read Article <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12 L12 4 M6 4 H12 V10"/></svg></summary><p>Low-carbon concrete, reclaimed wood, and recycled finishes are helping designers meet performance goals without sacrificing character.</p></details>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-cta">
+        <h2>Let's Build Something Extraordinary</h2>
+        <a href="mailto:hello@RAFA.com?subject=Start%20a%20project" class="btn btn-fill">Start Your Project
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12 L12 4 M6 4 H12 V10"/></svg>
+        </a>
+      </div>
+
+      <div class="footer-contact">
+        <ul class="contact-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M4 6.5 L12 13 L20 6.5"/></svg><a href="mailto:hello@RAFA.com">hello@RAFA.com</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M6 3 H9 L11 8 L8.5 9.5 C9.5 12.5 11.5 14.5 14.5 15.5 L16 13 L21 15 V18 C21 19.5 19.5 21 18 21 C10 21 3 14 3 6 C3 4.5 4.5 3 6 3 Z"/></svg><a href="tel:+12125550198">+1 (212) 555-0198</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 21 C12 21 5 14 5 9.5 A7 7 0 0 1 19 9.5 C19 14 12 21 12 21 Z"/><circle cx="12" cy="9.5" r="2.3"/></svg> 123 Design Avenue, New York, NY 10001</li>
+        </ul>
+      </div>
+
+      <div class="footer-brand">
+        <svg class="footer-decor" viewBox="0 0 200 220" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+          <path d="M20 220 V90 L100 20 L180 90 V220"/><path d="M40 220 V110 H160 V220"/><line x1="20" y1="140" x2="180" y2="140"/>
+        </svg>
+        <a href="index.html" class="logo">
+          <svg class="logo-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 4 L36 34 L26 34 L20 21 L14 34 L4 34 Z" fill="var(--accent-gold)"/></svg>
+          <span class="logo-text"><span class="logo-word">RAFA</span><span class="logo-tag">Architecture &amp; Construction</span></span>
+        </a>
+        <p>We design and build thoughtful spaces that elevate how people live, work, and connect.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2024 RAFA. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

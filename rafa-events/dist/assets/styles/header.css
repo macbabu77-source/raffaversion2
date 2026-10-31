@@ -1,0 +1,129 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(10, 10, 10, 0.72);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header .header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 78px;
+}
+
+header .logo,
+header .brand,
+header a[aria-label="Home"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: inherit;
+  text-decoration: none;
+}
+
+header .logo-mark,
+header .brand-mark,
+header .logo-word,
+header .brand-word {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+header .primary-nav,
+header .page-nav,
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+header .primary-nav a,
+header .page-nav a,
+header nav a {
+  position: relative;
+  color: rgba(255, 255, 255, 0.74);
+  text-decoration: none;
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+header .primary-nav a:hover,
+header .page-nav a:hover,
+header nav a:hover,
+header .primary-nav a.active,
+header .page-nav a[aria-current="page"],
+header nav a[aria-current="page"] {
+  color: #ffffff;
+}
+
+header .header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+header .menu-toggle,
+header .icon-btn {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+header .menu-toggle svg,
+header .icon-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 760px) {
+  header .primary-nav,
+  header .page-nav,
+  header nav {
+    display: none;
+  }
+
+  header.nav-open .primary-nav,
+  header.nav-open .page-nav,
+  header.nav-open nav {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 16px 24px 20px;
+    background: rgba(10, 10, 10, 0.96);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  header.nav-open .primary-nav a,
+  header.nav-open .page-nav a,
+  header.nav-open nav a {
+    width: 100%;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  header .menu-toggle,
+  header .icon-btn {
+    display: inline-flex;
+  }
+}
